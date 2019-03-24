@@ -58,3 +58,6 @@ Each animation frame the game follows a straightforward update loop. It:
 
 # Debugging
 Want to "play" the "game" but with some numbers up the top left corner? Type `game.options.debug = true` in your browser console while playing.
+
+# Notes
+Some images graciously stolen from (this link)[https://imgur.com/a/FMKlQ].
