@@ -81,6 +81,25 @@ export class Game {
         this.player.stopMoving()
       }
     })
+
+    window.addEventListener('touchstart', event => {
+      this.touchTimer = event.timeStamp
+      const xPosition = event.touches[0].clientX / this.canvas.width
+      if (xPosition > 0.8) {
+        this.player.startMoving('right')
+      }
+      if (xPosition < 0.2) {
+        this.player.startMoving('left')
+      }
+    })
+
+    window.addEventListener('touchend', event => {
+      const durationOfTouch = event.timeStamp - this.touchTimer
+      if (durationOfTouch < 100) {
+        this.player.jump()
+      }
+      this.player.stopMoving()
+    })
   }
 
   handlePhysics() {
