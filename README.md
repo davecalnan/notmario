@@ -29,8 +29,11 @@ Download the repository and run locally.
 ```
 git clone https://github.com/davecalnan/notmario.git
 
+npm install
+
 npm run dev
 ```
+Then open [http://localhost:1234](http://localhost:1234) in your browser.
 
 # How it (usually) works
 ## Initialising
@@ -52,3 +55,6 @@ Each animation frame the game follows a straightforward update loop. It:
 2. Resets the canvas so it's nice and blank. A blank canvas, if you will. (Oh, you won't? My apologies.)
 3. Scrolls the canvas if needs be to keep Not-MarioⓇ firmly on the screen.
 4. Draws ownly the visible portion of the world in glorious Technicolour.
+
+# Debugging
+Want to "play" the "game" but with some numbers up the top left corner? Type `game.options.debug = true` in your browser console while playing.
